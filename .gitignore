@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Build output
+.next/
+dist/
+build/
+.expo/
+
+# Azure Functions
+backend/azure-functions/bin/
+backend/azure-functions/obj/
+local.settings.json
+
+# OS / editor
+.DS_Store
+.vscode/
+*.log
