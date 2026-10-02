@@ -21,8 +21,10 @@ the same way without re-explaining the setup each time.
 - **Mobile:** React Native via Expo (`apps/mobile`)
 - **Web:** Next.js (`apps/web`)
 - **Backend:** Azure Functions, Node.js/TypeScript (`backend/azure-functions`)
-- **Database:** Azure Cosmos DB by default. Use Azure SQL instead only if
-  the data is clearly relational/tabular.
+- **Database:** Azure SQL Database (serverless tier) by default — owner
+  prefers SQL and Microsoft products. Store files such as photos in Azure
+  Blob Storage, not in the database. Use Azure Cosmos DB only if the data
+  is clearly document-shaped and not relational (state the reason if so).
 - **Auth:** Auth.js if a project needs simple auth; Azure AD B2C only if
   the project specifically needs enterprise-grade identity.
 - **CI/CD:** GitHub Actions, deploying to Azure.
