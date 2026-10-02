@@ -58,6 +58,14 @@ time it's actually needed, not preemptively.
   resources, deploying), state what it will do and its expected cost
   tier, and wait for explicit confirmation.
 
+## Requirements and designs
+
+- Requirements live in `docs/requirements/` (e.g. `screens.md`); designs
+  live in the Figma file linked at the top of the requirements document.
+- Whenever a decision or change affects a screen, update Figma in the
+  same step as the docs, link the changed frame from the docs, and note
+  "Figma updated" in the open-questions table and change log.
+
 ## What "done" looks like for a new feature
 
 1. Code written and explained in plain language (what it does, why this
