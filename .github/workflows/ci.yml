@@ -16,12 +16,12 @@ jobs:
       run:
         working-directory: apps/mobile
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Skip if the mobile app has not been created yet
         if: hashFiles('apps/mobile/package.json') == ''
         working-directory: .
         run: echo "apps/mobile has no package.json yet - nothing to check."
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         if: hashFiles('apps/mobile/package.json') != ''
         with:
           node-version: 22
@@ -38,12 +38,12 @@ jobs:
       run:
         working-directory: apps/web
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Skip if the web app has not been created yet
         if: hashFiles('apps/web/package.json') == ''
         working-directory: .
         run: echo "apps/web has no package.json yet - nothing to build."
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         if: hashFiles('apps/web/package.json') != ''
         with:
           node-version: 20
@@ -58,12 +58,12 @@ jobs:
       run:
         working-directory: backend/azure-functions
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Skip if the backend has not been created yet
         if: hashFiles('backend/azure-functions/package.json') == ''
         working-directory: .
         run: echo "backend/azure-functions has no package.json yet - nothing to build."
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         if: hashFiles('backend/azure-functions/package.json') != ''
         with:
           node-version: 20
