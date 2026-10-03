@@ -13,6 +13,31 @@ the same way without re-explaining the setup each time.
 - Prefer working, simple solutions over clever ones. Avoid introducing a
   new library/framework/pattern without explaining the trade-off first.
 
+## Owner's machine and tools
+
+Claude usually runs in the cloud and cannot see the owner's PC. Give
+instructions for this setup:
+
+- **Windows** with **PowerShell** (also the Terminal inside Android
+  Studio: `>_` icon bottom left, or Alt+F12). Instructions must be
+  Windows/PowerShell commands, not bash.
+- **Git** and the **GitHub CLI (`gh`)** are installed. Don't ask the owner
+  to install them again. `gh` should be logged in to the owner's GitHub
+  account: check with `gh auth status`, log in with `gh auth login`.
+- **Android Studio** is installed, including adb and the Android emulator
+  (virtual phone). The owner tests on a virtual phone and on an Android
+  phone connected with USB.
+- The Desktop and Documents folders are synced by **OneDrive**. Clone
+  projects into the user folder (`cd $HOME`, i.e. `C:\Users\<name>\<repo>`),
+  not into OneDrive folders.
+- Installing an app build: use `adb install -r` (keeps the app's data).
+  **Never** tell the owner to uninstall an app to fix an install error –
+  that deletes data stored on the phone. A common mistake is typing
+  `adb` twice in the command.
+- Secrets (API keys, tokens) are never pasted into the chat or shown in
+  screenshots; they go into GitHub repository secrets or the cloud
+  environment's settings.
+
 ## Stack (default for every project from this template)
 
 - **Language:** TypeScript everywhere (mobile, web, backend). Avoid
