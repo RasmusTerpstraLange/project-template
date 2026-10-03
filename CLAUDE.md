@@ -24,9 +24,16 @@ instructions for this setup:
 - **Git** and the **GitHub CLI (`gh`)** are installed. Don't ask the owner
   to install them again. `gh` should be logged in to the owner's GitHub
   account: check with `gh auth status`, log in with `gh auth login`.
-- **Android Studio** is installed, including adb and the Android emulator
-  (virtual phone). The owner tests on a virtual phone and on an Android
-  phone connected with USB.
+- The PC is a **Surface Laptop 7 with an ARM chip (Snapdragon X Elite)**.
+  Google's Android emulator (virtual phone) does not run on Windows ARM
+  PCs ("Virtualization extension is not supported"), so app builds are
+  tested on the owner's **Android phone connected with USB**. Don't suggest
+  the emulator on this PC.
+- **Android Studio** is installed, including adb, the Android SDK
+  command-line tools (`sdkmanager`, `avdmanager`) and the Android Emulator
+  package. Command-line SDK tools need Java (Android Studio's `jbr`
+  folder), and in PowerShell need `--%` before package names with
+  semicolons.
 - The Desktop and Documents folders are synced by **OneDrive**. Clone
   projects into the user folder (`cd $HOME`, i.e. `C:\Users\<name>\<repo>`),
   not into OneDrive folders.
