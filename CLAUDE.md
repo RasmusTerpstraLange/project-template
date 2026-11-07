@@ -10,8 +10,16 @@ the same way without re-explaining the setup each time.
   code, explain decisions in plain language, and flag anything that needs
   a manual step (accounts, payments, irreversible actions) rather than
   assuming it can proceed.
-- Prefer working, simple solutions over clever ones. Avoid introducing a
-  new library/framework/pattern without explaining the trade-off first.
+- Prefer working, simple solutions over clever ones.
+- **New technologies need the owner's explicit approval before they are
+  added.** That means any library or package (also ones from an
+  already-used framework, such as `expo-*` modules), framework, language,
+  database, cloud service or Azure resource type, or tool that isn't
+  already named in this file's stack or in the approved specification.
+  Claude first explains in plain language what it is, why it's needed,
+  the simpler alternatives and any cost, then waits for a clear yes.
+  Several can be approved in one go. A newer version of something
+  already used is not a new technology.
 
 ## Owner's machine and tools
 
