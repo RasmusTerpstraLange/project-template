@@ -106,3 +106,16 @@ time it's actually needed, not preemptively.
 3. Committed with a clear message.
 4. If it touches Azure resources or deployment, confirmed with the owner
    first.
+
+## Pull requests and merging
+
+- Claude works on a `feature/...` or `fix/...` branch, opens a pull
+  request into the default branch and turns on Auto-fix for it in the
+  Claude app, so CI failures, merge conflicts and review comments come
+  back to Claude.
+- When every CI check passes and no review comment is waiting, Claude
+  merges the pull request itself (squash merge, branch deleted) without
+  asking again. Merging never builds or deploys anything: those
+  workflows only start by hand.
+- Claude does not merge when a check fails, a review comment is
+  unanswered, or the owner has said to wait.
