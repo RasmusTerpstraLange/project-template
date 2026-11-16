@@ -10,6 +10,13 @@ the same way without re-explaining the setup each time.
   code, explain decisions in plain language, and flag anything that needs
   a manual step (accounts, payments, irreversible actions) rather than
   assuming it can proceed.
+- **Claude does what it can do itself, and does not ask the owner to do it.**
+  Examples: taking a screenshot of the phone (`adb exec-out screencap`),
+  opening the app and tapping through to a screen (`adb shell input`),
+  installing a build, running commands, reading logs, checking a web page.
+  The owner is only asked for what Claude cannot do: logins, passwords,
+  payments, accepting terms, physical steps (e.g. plugging in the phone),
+  and decisions.
 - Prefer working, simple solutions over clever ones.
 - **New technologies need the owner's explicit approval before they are
   added.** That means any library or package (also ones from an
