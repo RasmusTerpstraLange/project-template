@@ -98,6 +98,8 @@ Each kind of work has one home:
 - **Wiki (Azure DevOps):** documentation that doesn't follow the code,
   e.g. legal, operations, business and agreements with others. Never
   stored on the computer.
+- **Email:** rasmusterpstralange@gmail.com is used for handling email
+  communication.
 
 ## Stack (default for every project from this template)
 
