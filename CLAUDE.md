@@ -84,6 +84,21 @@ steps. Either way, this is the setup:
 - **Privacy:** Claude does not read individual users' personal data in
   the database. Use counts and aggregates, or ask the owner.
 
+## Tools
+
+Each kind of work has one home:
+
+- **SketchUp:** modelling physical models.
+- **Figma:** mock-ups and screen designs. The requirements document links
+  to the Figma file.
+- **GitHub:** version control for the code and all technical documents
+  (requirements in `docs/requirements/`, test plan, user manual), plus
+  pull requests and builds. Requirements stay next to the code so they
+  change in the same commit and keep the same history.
+- **Wiki (Azure DevOps):** documentation that doesn't follow the code,
+  e.g. legal, operations, business and agreements with others. Never
+  stored on the computer.
+
 ## Stack (default for every project from this template)
 
 - **Language:** TypeScript everywhere (mobile, web, backend). Avoid
